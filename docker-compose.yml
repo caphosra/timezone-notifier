@@ -1,0 +1,11 @@
+services:
+  timezone-notifier:
+    build: .
+    container_name: timezone-notifier
+    restart: unless-stopped
+    environment:
+      NODE_ENV: production
+      PORT: 5122
+      TRUST_PROXY: "false"
+    ports:
+      - "5122:5122"
